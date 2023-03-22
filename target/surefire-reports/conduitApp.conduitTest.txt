@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: conduitApp.conduitTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.854 s <<< FAILURE! - in conduitApp.conduitTest
+testParallel  Time elapsed: 8.847 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+no step-definition method match found for: Define token = response.user.token
+classpath:conduitApp/feature/Articles.feature:11
+js failed:
+>>>>
+01: 'Token' + token
+<<<<
+org.graalvm.polyglot.PolyglotException: ReferenceError: "token" is not defined
+- <js>.:program(Unnamed:1)
+
+classpath:conduitApp/feature/Articles.feature:16 ==> expected: <0> but was: <2>
+	at conduitApp.conduitTest.testParallel(conduitTest.java:15)
+

@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: realworldip.conduitTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 11.223 s <<< FAILURE! - in realworldip.conduitTest
+testParallel  Time elapsed: 11.213 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+no step-definition method match found for: Define token = response.user.token
+classpath:realworldip/feature/Articles.feature:11
+js failed:
+>>>>
+01: 'Token' + token
+<<<<
+org.graalvm.polyglot.PolyglotException: ReferenceError: "token" is not defined
+- <js>.:program(Unnamed:1)
+
+classpath:realworldip/feature/Articles.feature:16 ==> expected: <0> but was: <2>
+	at realworldip.conduitTest.testParallel(conduitTest.java:15)
+

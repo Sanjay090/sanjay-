@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"pool-1-thread-1","id":1},{"content":"pool-1-thread-2","id":2},{"content":"pool-1-thread-3","id":3},{"content":"pool-1-thread-4","id":4}];
+var items = [{"id":1,"group":1,"content":"conduitApp\/feature\/Articles[1:5]","start":1679418538143,"end":1679418541638,"title":"conduitApp\/feature\/Articles[1:5] 22:38:58.143-22:39:01.638 login in to the application","className":"failed"},{"id":2,"group":2,"content":"conduitApp\/feature\/Articles[2:13]","start":1679418538144,"end":1679418538793,"title":"conduitApp\/feature\/Articles[2:13] 22:38:58.144-22:38:58.793 to create an article","className":"failed"},{"id":3,"group":3,"content":"conduitApp\/feature\/homepage[1:8]","start":1679418538144,"end":1679418541963,"title":"conduitApp\/feature\/homepage[1:8] 22:38:58.144-22:39:01.963 get all tags name"},{"id":4,"group":4,"content":"conduitApp\/feature\/homepage[2:19]","start":1679418538144,"end":1679418542426,"title":"conduitApp\/feature\/homepage[2:19] 22:38:58.144-22:39:02.426 to get 10 Articles"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>
